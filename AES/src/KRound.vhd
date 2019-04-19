@@ -20,7 +20,12 @@ architecture dataflow of KeyExpansion is
 			);
 	end component key_rotate;
 	-- Sbox
-	
+	component ksbox is
+	port(
+		data: in word;
+		sdata: out word
+		);
+	end component;
 	component XRCON is
 		port(
 			data: in word;
@@ -41,8 +46,8 @@ architecture dataflow of KeyExpansion is
 	signal T: word;
 begin  
 	W3 <= iKey(31 downto 0);
-	R: key_rotate port map(W3, rW3);
-	-- Sbox
+	R: key_rotate port map(W3, rW3);	
+	S: ksbox port map(rW3, sW3);
 	X: XRCON port map(sW3, T, round);
 	-- XKey
 	
