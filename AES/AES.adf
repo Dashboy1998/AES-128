@@ -64,6 +64,7 @@ Selected=
 /Key_Rotate.vhd=-1
 /XRCON.vhd=-1
 /XKey.vhd=-1
+/KRound.vhd=-1
 
 [Files.Data]
 .\src\AES.vhd=VHDL Source Code
@@ -72,10 +73,10 @@ Selected=
 .\src\Sbox_Transformation.vhd=VHDL Source Code
 .\src\256_LUT.vhd=VHDL Source Code
 .\src\512_LUT.vhd=VHDL Source Code
-.\src\KeyExpanison.vhd=VHDL Source Code
 .\src\sbox.vhd=VHDL Source Code
 .\src\int.vhd=VHDL Source Code
 .\src\Key_Rotate.vhd=VHDL Source Code
 .\src\XRCON.vhd=VHDL Source Code
 .\src\XKey.vhd=VHDL Source Code
 
+.\src\KRound.vhd=VHDL Source Code
