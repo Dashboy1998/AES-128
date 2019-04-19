@@ -1,11 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all; 
 use work.rcon_table.all;
+use work.data_types.all;
 
 entity XRCON is
 	port(
-		data: in std_logic_vector(31 downto 0);
-		sdata: out std_logic_vector(31 downto 0);
+		data: in word;
+		sdata: out word;
 		round: in integer
 		);
 end entity;

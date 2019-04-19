@@ -1,17 +1,18 @@
 library ieee;
 use ieee.std_logic_1164.all; 
 use work.rcon_table.all;
+use work.data_types.all;
 
 entity XKey is
 	port(
-		data: in std_logic_vector(31 downto 0); -- W0, W1, W2, W3
-		sdata: out std_logic_vector(31 downto 0); -- W4, W5, W6, W7
-		T: in std_logic_vector(31 downto 0)
+		data: in word; -- W0, W1, W2, W3
+		sdata: out word; -- W4, W5, W6, W7
+		T: in word
 		);
 end entity;
 
 architecture dataflow of XKey is  
-	signal nKey: std_logic_vector(31 downto 0);
+	signal nKey: word;
 begin
 	nKey( 7 downto  0) <= data( 7 downto  0) xor nKey(15 downto  8); -- W7
 	nKey(15 downto  8) <= data(15 downto  8) xor nKey(23 downto 16); -- W6
