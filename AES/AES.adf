@@ -64,20 +64,19 @@ Selected=
 /XKey.vhd=-1
 /KRound.vhd=-1
 /Data_Types.vhd=-1
+/KSbox.vhd=-1
 
 [Files.Data]
 .\src\AES.vhd=VHDL Source Code
 .\src\Mult_Tables.vhd=VHDL Source Code
 .\src\Rcon_Table.vhd=VHDL Source Code
 .\src\Sbox_Transformation.vhd=VHDL Source Code
-.\src\256_LUT.vhd=VHDL Source Code
-.\src\512_LUT.vhd=VHDL Source Code
 .\src\sbox.vhd=VHDL Source Code
 .\src\int.vhd=VHDL Source Code
 .\src\Key_Rotate.vhd=VHDL Source Code
 .\src\XRCON.vhd=VHDL Source Code
 .\src\XKey.vhd=VHDL Source Code
 .\src\KRound.vhd=VHDL Source Code
-.\src\Word.vhd=VHDL Source Code
 .\src\Data_Types.vhd=VHDL Source Code
+.\src\KSbox.vhd=VHDL Source Code
 
