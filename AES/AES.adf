@@ -1,0 +1,81 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=AES
+
+[Library]
+AES=.\AES\AES.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+RUN_MODE_SYNTH=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=IMPL_WITH_SYNTH
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+DVM_DISPLAY=NO
+fileopenfolder=E:\Documents\School\2019_Spring\ECE_541\Project\AES\AES\src
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=1
+
+[$LibMap$]
+AES=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/AES.vhd=-1
+/Mult_Tables.vhd=-1
+/Rcon_Table.vhd=-1
+/Sbox_Transformation.vhd=-1
+/256_LUT.vhd=-1
+/512_LUT.vhd=-1
+/sbox.vhd=-1
+/int.vhd=-1
+/Key_Rotate.vhd=-1
+/XRCON.vhd=-1
+/XKey.vhd=-1
+
+[Files.Data]
+.\src\AES.vhd=VHDL Source Code
+.\src\Mult_Tables.vhd=VHDL Source Code
+.\src\Rcon_Table.vhd=VHDL Source Code
+.\src\Sbox_Transformation.vhd=VHDL Source Code
+.\src\256_LUT.vhd=VHDL Source Code
+.\src\512_LUT.vhd=VHDL Source Code
+.\src\KeyExpanison.vhd=VHDL Source Code
+.\src\sbox.vhd=VHDL Source Code
+.\src\int.vhd=VHDL Source Code
+.\src\Key_Rotate.vhd=VHDL Source Code
+.\src\XRCON.vhd=VHDL Source Code
+.\src\XKey.vhd=VHDL Source Code
+
