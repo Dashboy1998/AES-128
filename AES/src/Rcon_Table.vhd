@@ -1,4 +1,4 @@
-use work.LUT_array.all;
+use work.data_types.all;
 
 package rcon_table is
 	constant rcon_LUT : array_256 := (

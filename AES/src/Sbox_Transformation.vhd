@@ -1,5 +1,4 @@
-use work.LUT_array.all;
-use work.LUT2_array.all;
+use work.data_types.all;
 
 package Sbox_Transformation is
 	constant sbox_LUT : array_256 := (

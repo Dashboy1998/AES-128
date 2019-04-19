@@ -57,14 +57,13 @@ Selected=
 /Mult_Tables.vhd=-1
 /Rcon_Table.vhd=-1
 /Sbox_Transformation.vhd=-1
-/256_LUT.vhd=-1
-/512_LUT.vhd=-1
 /sbox.vhd=-1
 /int.vhd=-1
 /Key_Rotate.vhd=-1
 /XRCON.vhd=-1
 /XKey.vhd=-1
 /KRound.vhd=-1
+/Data_Types.vhd=-1
 
 [Files.Data]
 .\src\AES.vhd=VHDL Source Code
@@ -78,5 +77,7 @@ Selected=
 .\src\Key_Rotate.vhd=VHDL Source Code
 .\src\XRCON.vhd=VHDL Source Code
 .\src\XKey.vhd=VHDL Source Code
-
 .\src\KRound.vhd=VHDL Source Code
+.\src\Word.vhd=VHDL Source Code
+.\src\Data_Types.vhd=VHDL Source Code
+

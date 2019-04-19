@@ -1,5 +1,5 @@
 --Package to hold multiplication tables & Mix Matrices
-use work.LUT_array.all;
+use work.data_types.all;
 
 package mult_x is
 	--type LUT_Mix is array (0 to 3) of array_256;
