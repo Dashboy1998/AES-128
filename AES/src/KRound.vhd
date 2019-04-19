@@ -35,8 +35,8 @@ architecture dataflow of KeyExpansion is
 	end component XRCON;
 	component XKey is
 		port(
-			data: in word;
-			sdata: out word;
+			data: in std_logic_vector(127 downto 0);
+			sdata: out std_logic_vector(127 downto 0);
 			T: in word
 			); 
 	end component XKey;
