@@ -28,7 +28,7 @@ ON_SERVERFARM_SYNTH=0
 ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
 DVM_DISPLAY=NO
-fileopenfolder=E:\Documents\School\2019_Spring\ECE_541\Project\AES\AES\src
+fileopenfolder=E:\Documents\School\2019_Spring\ECE_541\Project\AES\AES\src\TestBench
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -55,10 +55,37 @@ Selected=
 [ORDER]
 Synchronize=0
 
+[Files.Data]
+.\src\AES.vhd=VHDL Source Code
+.\src\int.vhd=VHDL Source Code
+.\src\Data_Types.vhd=VHDL Source Code
+.\src\Sbox_Transformation.vhd=VHDL Source Code
+.\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
+.\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
+.\src\Key_Expansion\XKey.vhd=VHDL Source Code
+.\src\Key_Expansion\sbox.vhd=VHDL Source Code
+.\src\Key_Expansion\XRCON.vhd=VHDL Source Code
+.\src\Key_Expansion\KRound.vhd=VHDL Source Code
+.\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
+.\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
+.\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
+.\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
+.\src\Decryption\Decryption.vhd=VHDL Source Code
+.\src\Decryption\Decryption_Final.vhd=VHDL Source Code
+.\src\Decryption\DecryptionRounds.vhd=VHDL Source Code
+.\src\TestBench\aes_TB.vhd=VHDL Test Bench
+.\src\TestBench\aes_TB_runtest.do=Macro
+.\src\TestBench\aesTest_GRBC_s18.vhd=VHDL Source Code
+
 [Groups]
 Key_Expansion=1
 Encryption_Decryption=1
 Decryption=1
+TestBench=1
 
 [Files]
 /AES.vhd=-1
@@ -82,27 +109,7 @@ Encryption_Decryption/CryptionRounds.vhd=-1
 Decryption/Decryption.vhd=-1
 Decryption/Decryption_Final.vhd=-1
 Decryption/DecryptionRounds.vhd=-1
-
-[Files.Data]
-.\src\AES.vhd=VHDL Source Code
-.\src\int.vhd=VHDL Source Code
-.\src\Data_Types.vhd=VHDL Source Code
-.\src\Sbox_Transformation.vhd=VHDL Source Code
-.\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
-.\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
-.\src\Key_Expansion\XKey.vhd=VHDL Source Code
-.\src\Key_Expansion\sbox.vhd=VHDL Source Code
-.\src\Key_Expansion\XRCON.vhd=VHDL Source Code
-.\src\Key_Expansion\KRound.vhd=VHDL Source Code
-.\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
-.\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
-.\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
-.\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
-.\src\Decryption\Decryption.vhd=VHDL Source Code
-.\src\Decryption\Decryption_Final.vhd=VHDL Source Code
-.\src\Decryption\DecryptionRounds.vhd=VHDL Source Code
+TestBench/aesTest_GRBC_s18.vhd=-1
+TestBench/aes_TB.vhd=-1
+TestBench/aes_TB_runtest.do=-1
 
