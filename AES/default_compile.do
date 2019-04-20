@@ -15,4 +15,7 @@ acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/encryption_decryption/esbox
 acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/encryption_decryption/cryption.vhd"
 acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/encryption_decryption/cryption_final.vhd"
 acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/encryption_decryption/cryptionrounds.vhd"
+acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/decryption/decryption.vhd"
+acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/decryption/decryption_final.vhd"
+acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/decryption/decryptionrounds.vhd"
 acom -2008 -dbg -e 100 -protect 0 -reorder "$dsn/src/aes.vhd"
