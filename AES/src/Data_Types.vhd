@@ -12,7 +12,7 @@ package data_types is
 	subtype nRound is natural range 0 to numRounds;
 	type ARounds is array (0 to numRounds) of std_logic_vector(127 downto 0);
 	function to_AWord(X: std_logic_vector(127 downto 0)) return AWord;
-	function to_stdvect(X: AWord) return std_logic_vector;
+	function to_stdvect(r: AAByte) return std_logic_vector;
 end data_types;	   	 
 
 package body data_types is
@@ -43,27 +43,27 @@ package body data_types is
 		return Y;
 	end to_AWord;
 	
-	function to_stdvect(X: AWord) 
-	return std_logic_vector is
+	function to_stdvect(r: AAByte) 
+		return std_logic_vector is
 		variable Y: std_logic_vector(127 downto 0);
-		alias S00 is X(0)(31 downto 24);
-		alias S01 is X(1)(31 downto 24);
-		alias S02 is X(2)(31 downto 24);
-		alias S03 is X(3)(31 downto 24);
-		alias S04 is X(0)(23 downto 16);
-		alias S05 is X(1)(23 downto 16);
-		alias S06 is X(2)(23 downto 16);
-		alias S07 is X(3)(23 downto 16);
-		alias S08 is X(0)(15 downto  8);
-		alias S09 is X(1)(15 downto  8);
-		alias S10 is X(2)(15 downto  8);
-		alias S11 is X(3)(15 downto  8);
-		alias S12 is X(0)( 7 downto  0);
-		alias S13 is X(1)( 7 downto  0);
-		alias S14 is X(2)( 7 downto  0);
-		alias S15 is X(3)( 7 downto  0);
+		alias r00 is r(0)(0);
+		alias r10 is r(1)(0);
+		alias r20 is r(2)(0);
+		alias r30 is r(3)(0);
+		alias r01 is r(0)(1);
+		alias r11 is r(1)(1);
+		alias r21 is r(2)(1);
+		alias r31 is r(3)(1);
+		alias r02 is r(0)(2);
+		alias r12 is r(1)(2);
+		alias r22 is r(2)(2);
+		alias r32 is r(3)(2);
+		alias r03 is r(0)(3);
+		alias r13 is r(1)(3);
+		alias r23 is r(2)(3);
+		alias r33 is r(3)(3);
 	begin
-		Y := S00 & S01 & S02 & S03 & S04 & S05 & S06 & S07 & S08 & S09 & S10 & S11 & S12 & S13 & S14 & S15;
+		Y := r00 & r10 & r20 & r30 & r01 & r11 & r21 & r31 & r02 & r12 & r22 & r32 & r03 & r13 & r23 & r33;
 		return Y;
 	end to_stdvect;
 end package body data_types;
