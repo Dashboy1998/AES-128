@@ -25,3 +25,7 @@ library.cfg
 #*.awc
 #*.asdb
 synthesis.order
+
+#Ignore temp wave forms
+*wave.asdbw/
+wave.asbd

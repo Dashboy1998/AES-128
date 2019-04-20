@@ -28,7 +28,7 @@ architecture dataflow of KExpansion is
 	signal tKey: ARounds;
 	signal dKey: ARounds; -- Decryption Keys
 begin
-	nKey <= tKey when ED = '0' else dKey when ED = '1'; 
+	nKey <= tKey when ED = '0' else dKey; 
 	tKey(0) <= iKey;
 	GEN_KEYs: for i in 1 to numRounds generate
 		Key2: if i = 1 generate
