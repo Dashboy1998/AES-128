@@ -1,7 +1,7 @@
 use work.data_types.all;
 
 package rcon_table is
-	constant rcon_LUT : array_256 := (
+	constant rcon_LUT : AByte := (
 	X"B1",X"01",X"02",X"04",X"08",X"10",X"20",X"40",X"80",X"63",X"C6",X"EF",X"BD",X"19",X"32",X"64",	
 	X"C8",X"F3",X"85",X"69",X"D2",X"C7",X"ED",X"B9",X"11",X"22",X"44",X"88",X"73",X"E6",X"AF",X"3D",	
 	X"7A",X"F4",X"8B",X"75",X"EA",X"B7",X"0D",X"1A",X"34",X"68",X"D0",X"C3",X"E5",X"A9",X"31",X"62",	

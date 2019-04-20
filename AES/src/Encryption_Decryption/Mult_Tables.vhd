@@ -19,7 +19,7 @@ package mult_x is
 	); */
 	
 	--Multiplication tables
-	constant mult_3 : array_256 := (
+	constant mult_3 : AByte := (
 	X"00",X"03",X"06",X"05",X"0C",X"0F",X"0A",X"09",X"18",X"1B",X"1E",X"1D",X"14",X"17",X"12",X"11",
 	X"30",X"33",X"36",X"35",X"3C",X"3F",X"3A",X"39",X"28",X"2B",X"2E",X"2D",X"24",X"27",X"22",X"21",
 	X"60",X"63",X"66",X"65",X"6C",X"6F",X"6A",X"69",X"78",X"7B",X"7E",X"7D",X"74",X"77",X"72",X"71",
@@ -37,7 +37,7 @@ package mult_x is
 	X"43",X"40",X"45",X"46",X"4F",X"4C",X"49",X"4A",X"5B",X"58",X"5D",X"5E",X"57",X"54",X"51",X"52",
 	X"73",X"70",X"75",X"76",X"7F",X"7C",X"79",X"7A",X"6B",X"68",X"6D",X"6E",X"67",X"64",X"61",X"62"
 	);
-	constant mult_4 : array_256 := (
+	constant mult_4 : AByte := (
 	X"00",X"04",X"08",X"0C",X"10",X"14",X"18",X"1C",X"20",X"24",X"28",X"2C",X"30",X"34",X"38",X"3C",
 	X"40",X"44",X"48",X"4C",X"50",X"54",X"58",X"5C",X"60",X"64",X"68",X"6C",X"70",X"74",X"78",X"7C",
 	X"80",X"84",X"88",X"8C",X"90",X"94",X"98",X"9C",X"A0",X"A4",X"A8",X"AC",X"B0",X"B4",X"B8",X"BC",
@@ -55,7 +55,7 @@ package mult_x is
 	X"25",X"21",X"2D",X"29",X"35",X"31",X"3D",X"39",X"05",X"01",X"0D",X"09",X"15",X"11",X"1D",X"19",
 	X"65",X"61",X"6D",X"69",X"75",X"71",X"7D",X"79",X"45",X"41",X"4D",X"49",X"55",X"51",X"5D",X"59"
 	);
-	constant mult_7 : array_256 := (
+	constant mult_7 : AByte := (
 	X"00",X"07",X"0E",X"09",X"1C",X"1B",X"12",X"15",X"38",X"3F",X"36",X"31",X"24",X"23",X"2A",X"2D",
 	X"70",X"77",X"7E",X"79",X"6C",X"6B",X"62",X"65",X"48",X"4F",X"46",X"41",X"54",X"53",X"5A",X"5D",
 	X"E0",X"E7",X"EE",X"E9",X"FC",X"FB",X"F2",X"F5",X"D8",X"DF",X"D6",X"D1",X"C4",X"C3",X"CA",X"CD",
@@ -73,7 +73,7 @@ package mult_x is
 	X"66",X"61",X"68",X"6F",X"7A",X"7D",X"74",X"73",X"5E",X"59",X"50",X"57",X"42",X"45",X"4C",X"4B",
 	X"16",X"11",X"18",X"1F",X"0A",X"0D",X"04",X"03",X"2E",X"29",X"20",X"27",X"32",X"35",X"3C",X"3B"
 	);
-	constant mult_8 : array_256 := (
+	constant mult_8 : AByte := (
 	X"00",X"08",X"10",X"18",X"20",X"28",X"30",X"38",X"40",X"48",X"50",X"58",X"60",X"68",X"70",X"78",
 	X"80",X"88",X"90",X"98",X"A0",X"A8",X"B0",X"B8",X"C0",X"C8",X"D0",X"D8",X"E0",X"E8",X"F0",X"F8",
 	X"63",X"6B",X"73",X"7B",X"43",X"4B",X"53",X"5B",X"23",X"2B",X"33",X"3B",X"03",X"0B",X"13",X"1B",
@@ -91,7 +91,7 @@ package mult_x is
 	X"4A",X"42",X"5A",X"52",X"6A",X"62",X"7A",X"72",X"0A",X"02",X"1A",X"12",X"2A",X"22",X"3A",X"32",
 	X"CA",X"C2",X"DA",X"D2",X"EA",X"E2",X"FA",X"F2",X"8A",X"82",X"9A",X"92",X"AA",X"A2",X"BA",X"B2"
 	);
-	constant mult_9 : array_256 := (
+	constant mult_9 : AByte := (
 	X"00",X"09",X"12",X"1B",X"24",X"2D",X"36",X"3F",X"48",X"41",X"5A",X"53",X"6C",X"65",X"7E",X"77",
 	X"90",X"99",X"82",X"8B",X"B4",X"BD",X"A6",X"AF",X"D8",X"D1",X"CA",X"C3",X"FC",X"F5",X"EE",X"E7",
 	X"43",X"4A",X"51",X"58",X"67",X"6E",X"75",X"7C",X"0B",X"02",X"19",X"10",X"2F",X"26",X"3D",X"34",
@@ -109,7 +109,7 @@ package mult_x is
 	X"AA",X"A3",X"B8",X"B1",X"8E",X"87",X"9C",X"95",X"E2",X"EB",X"F0",X"F9",X"C6",X"CF",X"D4",X"DD",
 	X"3A",X"33",X"28",X"21",X"1E",X"17",X"0C",X"05",X"72",X"7B",X"60",X"69",X"56",X"5F",X"44",X"4D"
 	);
-	constant mult_b : array_256 := (
+	constant mult_b : AByte := (
 	X"00",X"0B",X"16",X"1D",X"2C",X"27",X"3A",X"31",X"58",X"53",X"4E",X"45",X"74",X"7F",X"62",X"69",
 	X"B0",X"BB",X"A6",X"AD",X"9C",X"97",X"8A",X"81",X"E8",X"E3",X"FE",X"F5",X"C4",X"CF",X"D2",X"D9",
 	X"03",X"08",X"15",X"1E",X"2F",X"24",X"39",X"32",X"5B",X"50",X"4D",X"46",X"77",X"7C",X"61",X"6A",
