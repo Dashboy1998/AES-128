@@ -71,6 +71,7 @@ Key_Expansion/KExpansion.vhd=-1
 Encryption_Decryption/Mult_Tables.vhd=-1
 Encryption_Decryption/Esbox.vhd=-1
 Encryption_Decryption/EDRotate.vhd=-1
+Encryption_Decryption/EMixColumns.vhd=-1
 
 [Files.Data]
 .\src\AES.vhd=VHDL Source Code
@@ -87,4 +88,5 @@ Encryption_Decryption/EDRotate.vhd=-1
 .\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
 .\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
+.\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
 
