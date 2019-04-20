@@ -36,6 +36,6 @@ begin
 		C: cryption port map(R(i-1), Keys(i), ED, R(i)); 	
 	end generate;
 	
-	F: cryption_final port map(R(numRounds), Keys(numRounds), ED, Xout);
+	F: cryption_final port map(R(numRounds-1), Keys(numRounds), ED, Xout);
 	
 end architecture;
