@@ -13,5 +13,5 @@ architecture dataflow of EDRotate is
 	signal forward: std_logic_vector(127 downto 0);
 	signal inverse: std_logic_vector(127 downto 0);
 begin
-	
+
 end architecture;

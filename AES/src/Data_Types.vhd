@@ -10,4 +10,19 @@ package data_types is
 	subtype word is std_logic_vector(31 downto 0);
 	subtype nRound is natural range 0 to numRounds;
 	type ARounds is array (0 to numRounds) of std_logic_vector(127 downto 0);
-end data_types;	   
+	function to_AAByte(X: std_logic_vector(127 downto 0)) return AAByte;
+end data_types;	   	 
+
+package body data_types is
+	function to_AAByte(X: std_logic_vector(127 downto 0)) 
+	return AAByte is
+	variable Y: AAByte(0 to 3)(0 to 3);
+	begin
+		Column: for j in 0 to 3 loop -- Columns
+			Row: for i in 0 to 3 loop -- Rows
+				Y(i)(j) := X((127-(j*8)-(i*32)) downto (120-(j*8)-(i*32)));
+			end loop Row;
+		end loop Column;
+		return Y;
+	end to_AAByte; 
+end package body data_types;
