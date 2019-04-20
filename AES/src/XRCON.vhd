@@ -7,7 +7,7 @@ entity XRCON is
 	port(
 		data: in word;
 		sdata: out word;
-		round: in integer
+		round: in nRound
 		);
 end entity;
 

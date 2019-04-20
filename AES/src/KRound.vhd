@@ -4,15 +4,15 @@ use ieee.std_logic_1164.all;
 use work.Sbox_Transformation.all;
 use work.data_types.all;
 
-entity KeyExpansion is -- Entity for doing round 1 - 12 of key expansion
+entity KRound is -- Entity for doing round of key expansion
 	port(
 		iKey: in std_logic_vector(127 downto 0);
 		nKey: out std_logic_vector(127 downto 0);
-		round: in integer
+		round: in nRound
 		);
-end KeyExpansion;
+end KRound;
 
-architecture dataflow of KeyExpansion is
+architecture dataflow of KRound is
 	component key_rotate is
 		port(
 			data: in word;
@@ -21,10 +21,10 @@ architecture dataflow of KeyExpansion is
 	end component key_rotate;
 	-- Sbox
 	component ksbox is
-	port(
-		data: in word;
-		sdata: out word
-		);
+		port(
+			data: in word;
+			sdata: out word
+			);
 	end component;
 	component XRCON is
 		port(
@@ -49,5 +49,5 @@ begin
 	R: key_rotate port map(W3, rW3);	
 	S: ksbox port map(rW3, sW3);
 	X: XRCON port map(sW3, T, round);
-	-- XKey
+	K: XKey port map(iKey, nKey, T); 
 end dataflow;
