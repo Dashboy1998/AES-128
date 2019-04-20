@@ -5,7 +5,7 @@ version=4
 Current Config=compile
 
 [Configurations]
-compile=AES
+compile=aes
 
 [Library]
 AES=.\AES\AES.lib
@@ -48,9 +48,32 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=aes|dataflow|0 cryption|dataflow|0 cryption_final|dataflow|0 edrotate|dataflow|0 kexpansion|dataflow|0 kround|dataflow|0 mixcolumns|dataflow|0
+HierarchyInformation=aes|dataflow|0
 ShowHide=ShowTopLevel
 Selected=
+
+[Files.Data]
+.\src\int.vhd=VHDL Source Code
+.\src\Data_Types.vhd=VHDL Source Code
+.\src\Sbox_Transformation.vhd=VHDL Source Code
+.\src\AES.vhd=VHDL Source Code
+.\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
+.\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
+.\src\Key_Expansion\XKey.vhd=VHDL Source Code
+.\src\Key_Expansion\XRCON.vhd=VHDL Source Code
+.\src\Key_Expansion\KRound.vhd=VHDL Source Code
+.\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
+.\src\Key_Expansion\sbox.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
+.\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
+.\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
+.\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
+
+[ORDER]
+Synchronize=0
 
 [Groups]
 Key_Expansion=1
@@ -61,37 +84,18 @@ Encryption_Decryption=1
 /int.vhd=-1
 /Data_Types.vhd=-1
 /Sbox_Transformation.vhd=-1
-Key_Expansion/Rcon_Table.vhd=-1
 Key_Expansion/Key_Rotate.vhd=-1
-Key_Expansion/XRCON.vhd=-1
+Key_Expansion/Rcon_Table.vhd=-1
 Key_Expansion/XKey.vhd=-1
 Key_Expansion/sbox.vhd=-1
+Key_Expansion/XRCON.vhd=-1
 Key_Expansion/KRound.vhd=-1
 Key_Expansion/KExpansion.vhd=-1
 Encryption_Decryption/Mult_Tables.vhd=-1
-Encryption_Decryption/Esbox.vhd=-1
 Encryption_Decryption/EDRotate.vhd=-1
 Encryption_Decryption/EMixColumns.vhd=-1
+Encryption_Decryption/Esbox.vhd=-1
 Encryption_Decryption/Cryption.vhd=-1
 Encryption_Decryption/Cryption_Final.vhd=-1
 Encryption_Decryption/CryptionRounds.vhd=-1
 
-[Files.Data]
-.\src\AES.vhd=VHDL Source Code
-.\src\int.vhd=VHDL Source Code
-.\src\Data_Types.vhd=VHDL Source Code
-.\src\Sbox_Transformation.vhd=VHDL Source Code
-.\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
-.\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
-.\src\Key_Expansion\XRCON.vhd=VHDL Source Code
-.\src\Key_Expansion\XKey.vhd=VHDL Source Code
-.\src\Key_Expansion\sbox.vhd=VHDL Source Code
-.\src\Key_Expansion\KRound.vhd=VHDL Source Code
-.\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
-.\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
-.\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
-.\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
-.\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
