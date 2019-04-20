@@ -1,5 +1,6 @@
 library ieee;
-use ieee.std_logic_1164.all;
+use ieee.std_logic_1164.all;	
+use ieee.numeric_std.all;
 
 package data_types is
 	-- AES-128 has 10 rounds, if you wish for more security you may increase it
@@ -15,6 +16,8 @@ package data_types is
 	function to_AWord(X: std_logic_vector(127 downto 0)) return AWord;
 	function to_stdvect(r: AAByte) return std_logic_vector;
 	function to_stdvect(r: AWord) return std_logic_vector;
+	function rol_Bytes(X: word; r: natural) return word;
+	function ror_Bytes(X: word; r: natural) return word;
 end data_types;	   	 
 
 package body data_types is
@@ -102,4 +105,16 @@ package body data_types is
 		Y := r00 & r10 & r20 & r30 & r01 & r11 & r21 & r31 & r02 & r12 & r22 & r32 & r03 & r13 & r23 & r33;
 		return Y;
 	end to_stdvect;
+	
+	function rol_Bytes(X: word; r: natural) 
+		return word is
+	begin
+		return std_logic_vector(unsigned(X) rol (r * 8));
+	end rol_Bytes;
+	
+	function ror_Bytes(X: word; r: natural) 
+		return word is
+	begin
+		return std_logic_vector(unsigned(X) ror (r * 8));
+	end ror_Bytes;
 end package body data_types;

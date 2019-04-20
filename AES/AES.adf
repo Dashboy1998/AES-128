@@ -90,8 +90,6 @@ TestBench/Waveform.awc=-1
 .\src\int.vhd=VHDL Source Code
 .\src\Data_Types.vhd=VHDL Source Code
 .\src\Sbox_Transformation.vhd=VHDL Source Code
-.\src\Waveform.asdb=Accelerated Waveform File
-.\src\Waveform.awc=Accelerated Waveform Configuration
 .\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
 .\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
 .\src\Key_Expansion\XKey.vhd=VHDL Source Code
@@ -109,6 +107,6 @@ TestBench/Waveform.awc=-1
 .\src\TestBench\aesTest_GRBC_s18.vhd=VHDL Source Code
 .\src\TestBench\aes_TB.vhd=VHDL Test Bench
 .\src\TestBench\aes_TB_runtest.do=Macro
-
 .\src\TestBench\Waveform.asdb=Accelerated Waveform File
 .\src\TestBench\Waveform.awc=Accelerated Waveform Configuration
+

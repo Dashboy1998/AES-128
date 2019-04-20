@@ -18,9 +18,9 @@ begin
 	begin 
 		for i in 0 to 3 loop -- Rows
 			if(ED = '0') then -- Rotate left
-				r(i) <= matrix(i) rol (i * 8);
+				r(i) <= rol_Bytes(matrix(i), i);
 			else -- Rotate right
-				r(i) <= matrix(i) ror (i * 8);
+				r(i) <= ror_Bytes(matrix(i), i);
 			end if;
 		end loop;	
 	end process;

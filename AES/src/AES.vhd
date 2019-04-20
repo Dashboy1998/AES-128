@@ -7,8 +7,7 @@ entity AES is
 		data: in std_logic_vector(127 downto 0);
 		key: in std_logic_vector(127 downto 0);
 		ED: in std_logic;
-		Xout: out std_logic_vector(127 downto 0);
-		Yout: out std_logic_vector(127 downto 0) -- Plain text
+		Xout: out std_logic_vector(127 downto 0)
 		);
 end entity AES;
 
