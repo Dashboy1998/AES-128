@@ -52,18 +52,22 @@ HierarchyInformation=aes|dataflow|0
 ShowHide=ShowTopLevel
 Selected=
 
+[ORDER]
+Synchronize=0
+
 [Files.Data]
+.\src\AES.vhd=VHDL Source Code
 .\src\int.vhd=VHDL Source Code
 .\src\Data_Types.vhd=VHDL Source Code
 .\src\Sbox_Transformation.vhd=VHDL Source Code
-.\src\AES.vhd=VHDL Source Code
+.\src\inAES.vhd=VHDL Source Code
 .\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
 .\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
 .\src\Key_Expansion\XKey.vhd=VHDL Source Code
+.\src\Key_Expansion\sbox.vhd=VHDL Source Code
 .\src\Key_Expansion\XRCON.vhd=VHDL Source Code
 .\src\Key_Expansion\KRound.vhd=VHDL Source Code
 .\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
-.\src\Key_Expansion\sbox.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
 .\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
 .\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
@@ -71,9 +75,6 @@ Selected=
 .\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
 .\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
-
-[ORDER]
-Synchronize=0
 
 [Groups]
 Key_Expansion=1

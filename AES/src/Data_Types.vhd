@@ -11,12 +11,23 @@ package data_types is
 	type AWord is array (0 to 3) of word;
 	subtype nRound is natural range 0 to numRounds;
 	type ARounds is array (0 to numRounds) of std_logic_vector(127 downto 0);
+	function flip(X: ARounds) return ARounds;
 	function to_AWord(X: std_logic_vector(127 downto 0)) return AWord;
 	function to_stdvect(r: AAByte) return std_logic_vector;
 	function to_stdvect(r: AWord) return std_logic_vector;
 end data_types;	   	 
 
 package body data_types is
+	function flip(X: ARounds) 
+	return ARounds is
+	variable Y: ARounds;
+	begin
+		for i in X'range loop
+			Y(X'right - i):= X(i);
+		end loop;
+		return Y;
+	end flip;
+	
 	function to_AWord(X: std_logic_vector(127 downto 0))
 		return AWord is
 		variable Y: AWord;

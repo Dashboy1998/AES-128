@@ -21,7 +21,7 @@ architecture dataflow of AES is
 	component cryptionRounds is
 		port(
 			data: in std_logic_vector(127 downto 0);
-			Keys: in ARounds;
+			EKeys: in ARounds;
 			ED: in std_logic;
 			Xout: out std_logic_vector(127 downto 0)
 			);
