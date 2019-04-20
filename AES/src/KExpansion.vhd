@@ -17,15 +17,17 @@ architecture dataflow of KExpansion is
 		round: in nRound
 		); 
 	end component KRound;
+	signal tKey: ARounds;
 begin
-	nKey(0) <= iKey;
+	nKey <= tKey; 
+	tKey(0) <= iKey;
 	GEN_KEYs: for i in 1 to numRounds generate
 		Key2: if i = 1 generate
-			K2: KRound port map(iKey, nKey(i), i);
+			K2: KRound port map(iKey, tKey(i), i);
 		end generate Key2;
 			
 		KeyJ: if i > 1 generate
-			KJ: KRound port map(nKey(i-1), nKey(i), i); 
+			KJ: KRound port map(tKey(i-1), tKey(i), i); 
 		end generate KeyJ;
 	end generate GEN_KEYs;
 end dataflow;

@@ -48,7 +48,7 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=
+HierarchyInformation=kexpansion|dataflow|0  
 ShowHide=ShowTopLevel
 Selected=
 

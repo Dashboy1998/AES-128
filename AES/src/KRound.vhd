@@ -30,7 +30,7 @@ architecture dataflow of KRound is
 		port(
 			data: in word;
 			sdata: out word;
-			round: in integer
+			round: in nRound
 			);
 	end component XRCON;
 	component XKey is
