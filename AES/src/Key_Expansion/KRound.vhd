@@ -20,7 +20,7 @@ architecture dataflow of KRound is
 			);
 	end component key_rotate;
 	-- Sbox
-	component ksbox is
+	component sbox is
 		port(
 			data: in word;
 			sdata: out word
@@ -47,7 +47,7 @@ architecture dataflow of KRound is
 begin  
 	W3 <= iKey(31 downto 0);
 	R: key_rotate port map(W3, rW3);	
-	S: ksbox port map(rW3, sW3);
+	S: sbox port map(rW3, sW3);
 	X: XRCON port map(sW3, T, round);
 	K: XKey port map(iKey, nKey, T); 
 end dataflow;

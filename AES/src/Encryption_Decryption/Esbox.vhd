@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use work.Sbox_Transformation.all; 
 use work.std_int.all;
 
-entity sbox is
+entity Esbox is
 	port(
 		data: in std_logic_vector(127 downto 0);
 		sdata: out std_logic_vector(127 downto 0);
@@ -12,7 +12,7 @@ entity sbox is
 		);
 end entity;
 
-architecture dataflow of sbox is
+architecture dataflow of Esbox is
 begin
 	sdata( 7 downto    0) <= sbox_and_Inv(int(ED))(int(data(  7 downto   0)));
 	sdata( 15 downto   8) <= sbox_and_Inv(int(ED))(int(data( 15 downto   8)));

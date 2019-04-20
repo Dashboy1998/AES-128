@@ -65,11 +65,11 @@ Key_Expansion/Rcon_Table.vhd=-1
 Key_Expansion/Key_Rotate.vhd=-1
 Key_Expansion/XRCON.vhd=-1
 Key_Expansion/XKey.vhd=-1
-Key_Expansion/KSbox.vhd=-1
+Key_Expansion/sbox.vhd=-1
 Key_Expansion/KRound.vhd=-1
 Key_Expansion/KExpansion.vhd=-1
 Encryption_Decryption/Mult_Tables.vhd=-1
-Encryption_Decryption/sbox.vhd=-1
+Encryption_Decryption/Esbox.vhd=-1
 Encryption_Decryption/EDRotate.vhd=-1
 
 [Files.Data]
@@ -77,15 +77,14 @@ Encryption_Decryption/EDRotate.vhd=-1
 .\src\int.vhd=VHDL Source Code
 .\src\Data_Types.vhd=VHDL Source Code
 .\src\Sbox_Transformation.vhd=VHDL Source Code
-.\src\EDRotate.vhd=VHDL Source Code
 .\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
 .\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
 .\src\Key_Expansion\XRCON.vhd=VHDL Source Code
 .\src\Key_Expansion\XKey.vhd=VHDL Source Code
-.\src\Key_Expansion\KSbox.vhd=VHDL Source Code
+.\src\Key_Expansion\sbox.vhd=VHDL Source Code
 .\src\Key_Expansion\KRound.vhd=VHDL Source Code
 .\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
-.\src\Encryption_Decryption\sbox.vhd=VHDL Source Code
-
+.\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
 .\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
+

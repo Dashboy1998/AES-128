@@ -5,14 +5,14 @@ use work.Sbox_Transformation.all;
 use work.std_int.all; 
 use work.data_types.all;
 
-entity ksbox is
+entity sbox is
 	port(
 		data: in word;
 		sdata: out word
 		);
 end entity;
 
-architecture dataflow of ksbox is
+architecture dataflow of sbox is
 begin
 	sdata( 7 downto    0) <= sbox_LUT(int(data(  7 downto   0)));
 	sdata( 15 downto   8) <= sbox_LUT(int(data( 15 downto   8)));
