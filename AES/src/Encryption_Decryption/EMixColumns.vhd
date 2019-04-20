@@ -31,6 +31,7 @@ architecture dataflow of MixColumns is
 	alias r33 is r(3)( 7 downto  0);
 	signal C: AAByte(0 to 3)(0 to 3);
 begin 
+	nR <= to_stdvect(C);
 	-- First Row
 	C(0)(0) <= M00(int(ED))(int(r00)) xor M01(int(ED))(int(r10)) xor M02(int(ED))(int(r20)) xor M03(int(ED))(int(r30));
 	C(0)(1) <= M00(int(ED))(int(r01)) xor M01(int(ED))(int(r11)) xor M02(int(ED))(int(r21)) xor M03(int(ED))(int(r31));
