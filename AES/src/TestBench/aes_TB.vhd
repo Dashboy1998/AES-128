@@ -16,8 +16,8 @@ architecture TB_ARCHITECTURE of aes_tb is
 		data : in STD_LOGIC_VECTOR(127 downto 0);
 		key : in STD_LOGIC_VECTOR(127 downto 0);
 		ED : in STD_LOGIC;
-		Xout : out STD_LOGIC_VECTOR(127 downto 0);
-		Yout : out STD_LOGIC_VECTOR(127 downto 0) );
+		Xout : out STD_LOGIC_VECTOR(127 downto 0)
+		);
 	end component;
 
 	-- Stimulus signals - signals mapped to the input and inout ports of tested entity
@@ -26,7 +26,6 @@ architecture TB_ARCHITECTURE of aes_tb is
 	signal ED : STD_LOGIC;
 	-- Observed signals - signals mapped to the output ports of tested entity
 	signal Xout : STD_LOGIC_VECTOR(127 downto 0);
-	signal Yout : STD_LOGIC_VECTOR(127 downto 0);
 
 	-- Add your code here ...
 	signal correct: boolean;
@@ -38,8 +37,7 @@ begin
 			data => data,
 			key => key,
 			ED => ED,
-			Xout => Xout,
-			Yout => Yout
+			Xout => Xout
 		);
 
 	-- Add your stimulus here ...

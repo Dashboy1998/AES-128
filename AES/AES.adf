@@ -74,9 +74,6 @@ Synchronize=0
 .\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
 .\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
-.\src\Decryption\Decryption.vhd=VHDL Source Code
-.\src\Decryption\Decryption_Final.vhd=VHDL Source Code
-.\src\Decryption\DecryptionRounds.vhd=VHDL Source Code
 .\src\TestBench\aes_TB.vhd=VHDL Test Bench
 .\src\TestBench\aes_TB_runtest.do=Macro
 .\src\TestBench\aesTest_GRBC_s18.vhd=VHDL Source Code
@@ -84,7 +81,6 @@ Synchronize=0
 [Groups]
 Key_Expansion=1
 Encryption_Decryption=1
-Decryption=1
 TestBench=1
 
 [Files]
@@ -106,10 +102,6 @@ Encryption_Decryption/Esbox.vhd=-1
 Encryption_Decryption/Cryption.vhd=-1
 Encryption_Decryption/Cryption_Final.vhd=-1
 Encryption_Decryption/CryptionRounds.vhd=-1
-Decryption/Decryption.vhd=-1
-Decryption/Decryption_Final.vhd=-1
-Decryption/DecryptionRounds.vhd=-1
 TestBench/aesTest_GRBC_s18.vhd=-1
 TestBench/aes_TB.vhd=-1
 TestBench/aes_TB_runtest.do=-1
-

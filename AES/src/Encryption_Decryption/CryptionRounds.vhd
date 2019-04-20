@@ -5,7 +5,7 @@ use work.data_types.all;
 entity cryptionRounds is -- Used for encryption and decryption rounds 1 to N-1
 	port(
 		data: in std_logic_vector(127 downto 0);
-		EKeys: in ARounds; -- In order for encryption
+		Keys: in ARounds; -- In order for encryption
 		ED: in std_logic;
 		Xout: out std_logic_vector(127 downto 0)
 		);
@@ -29,17 +29,13 @@ architecture dataflow of cryptionRounds is
 			);
 	end component cryption_final;
 	signal R: ARounds;
-	signal DKeys: ARounds; -- In order for decryption
-	signal Keys: ARounds; -- In order needed
 begin
-	DKeys <= flip(EKeys);
-	Keys <= EKeys;
 	R(0) <= data xor Keys(0);
 	
 	Gen_R: for i in 1 to (numRounds - 1) generate
 		C: cryption port map(R(i-1), Keys(i), ED, R(i)); 	
 	end generate;
 	
-	F: cryption_final port map(R(numRounds-1), EKeys(numRounds), ED, R(numRounds));
+	F: cryption_final port map(R(numRounds-1), Keys(numRounds), ED, R(numRounds));
 	Xout <= R(numRounds);
 end architecture;
