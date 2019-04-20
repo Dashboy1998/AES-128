@@ -16,6 +16,7 @@ architecture dataflow of AES is
 	component KExpansion is
 		port(
 			iKey: in std_logic_vector(127 downto 0);
+			ED: in std_logic;
 			nKey: out ARounds
 			);
 	end component KExpansion;
@@ -36,7 +37,7 @@ architecture dataflow of AES is
 	end component decryptionRounds;
 	signal Keys: ARounds;
 begin
-	K: KExpansion port map(key, Keys);
+	K: KExpansion port map(key, ED, Keys);
 	C: cryptionRounds port map(data, Keys, ED, Xout);
 	D: decryptionRounds port map(data, Keys, Yout);
 end architecture;

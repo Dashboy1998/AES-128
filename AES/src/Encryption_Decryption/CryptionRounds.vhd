@@ -33,13 +33,13 @@ architecture dataflow of cryptionRounds is
 	signal Keys: ARounds; -- In order needed
 begin
 	DKeys <= flip(EKeys);
-	Keys <= EKeys when ED = '0' else DKeys when ED = '1';
+	Keys <= EKeys;
 	R(0) <= data xor Keys(0);
 	
 	Gen_R: for i in 1 to (numRounds - 1) generate
 		C: cryption port map(R(i-1), Keys(i), ED, R(i)); 	
 	end generate;
 	
-	F: cryption_final port map(R(numRounds-1), Keys(numRounds), ED, R(numRounds));
+	F: cryption_final port map(R(numRounds-1), EKeys(numRounds), ED, R(numRounds));
 	Xout <= R(numRounds);
 end architecture;

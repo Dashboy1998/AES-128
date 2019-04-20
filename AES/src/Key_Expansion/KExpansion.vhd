@@ -5,6 +5,7 @@ use work.data_types.all;
 entity KExpansion is -- Entity for doing all key expansions
 	port(
 		iKey: in std_logic_vector(127 downto 0);
+		ED: std_logic;
 		nKey: out ARounds
 		);
 end KExpansion;
@@ -17,9 +18,17 @@ architecture dataflow of KExpansion is
 			round: in nRound
 			); 
 	end component KRound;
+	component MixColumns is
+		port(
+			r: in AWord;
+			nR: out std_logic_vector(127 downto 0);
+			ED: in std_logic
+			);
+	end component MixColumns;
 	signal tKey: ARounds;
+	signal dKey: ARounds; -- Decryption Keys
 begin
-	nKey <= tKey; 
+	nKey <= tKey when ED = '0' else dKey when ED = '1'; 
 	tKey(0) <= iKey;
 	GEN_KEYs: for i in 1 to numRounds generate
 		Key2: if i = 1 generate
@@ -30,4 +39,11 @@ begin
 			KJ: KRound port map(tKey(i-1), tKey(i), i); 
 		end generate KeyJ;
 	end generate GEN_KEYs;
+	-- For Decryption Key
+	dKey(0) <= tKey(numRounds);
+	dKey(12) <= tKey(0);
+	GEN_INVKEYs: for i in 1 to numRounds - 1 generate
+		M: MixColumns port map(to_AWord(tKey(numRounds-i)), dKey(i), '1');
+	end generate GEN_INVKEYs;
+	
 end dataflow;
