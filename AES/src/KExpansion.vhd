@@ -18,14 +18,14 @@ architecture dataflow of KExpansion is
 		); 
 	end component KRound;
 begin
-	nKey(1) <= iKey;
-	GEN_KEYs: for i in 2 to numRounds generate
-		Key2: if i = 2 generate
-			K2: KRound port map(iKey, nKey(2), (i-1));
+	nKey(0) <= iKey;
+	GEN_KEYs: for i in 1 to numRounds generate
+		Key2: if i = 1 generate
+			K2: KRound port map(iKey, nKey(i), i);
 		end generate Key2;
 			
-		KeyJ: if i > 2 generate
-			KJ: KRound port map(nKey(i-1), nKey(i), (i-1)); 
+		KeyJ: if i > 1 generate
+			KJ: KRound port map(nKey(i-1), nKey(i), i); 
 		end generate KeyJ;
 	end generate GEN_KEYs;
 end dataflow;
