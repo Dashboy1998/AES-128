@@ -48,7 +48,7 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=kexpansion|dataflow|0
+HierarchyInformation=aes|dataflow|0 cryption|dataflow|0 cryption_final|dataflow|0 edrotate|dataflow|0 kexpansion|dataflow|0 kround|dataflow|0 mixcolumns|dataflow|0
 ShowHide=ShowTopLevel
 Selected=
 
@@ -71,6 +71,10 @@ Key_Expansion/KExpansion.vhd=-1
 Encryption_Decryption/Mult_Tables.vhd=-1
 Encryption_Decryption/Esbox.vhd=-1
 Encryption_Decryption/EDRotate.vhd=-1
+Encryption_Decryption/EMixColumns.vhd=-1
+Encryption_Decryption/Cryption.vhd=-1
+Encryption_Decryption/Cryption_Final.vhd=-1
+Encryption_Decryption/CryptionRounds.vhd=-1
 
 [Files.Data]
 .\src\AES.vhd=VHDL Source Code
@@ -87,4 +91,7 @@ Encryption_Decryption/EDRotate.vhd=-1
 .\src\Encryption_Decryption\Mult_Tables.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Esbox.vhd=VHDL Source Code
 .\src\Encryption_Decryption\EDRotate.vhd=VHDL Source Code
-
+.\src\Encryption_Decryption\EMixColumns.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
+.\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
+.\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
