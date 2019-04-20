@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 use work.data_types.all;
 
 entity cryption is -- Used for encryption and decryption rounds 1 to N-1
-	generic(round: nRound);
 	port(
 		data: in std_logic_vector(127 downto 0);
 		key: in std_logic_vector(127 downto 0);
