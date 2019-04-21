@@ -5,10 +5,10 @@ use work.Sbox_Transformation.all;
 use work.data_types.all;
 
 entity KRound is -- Entity for doing round of key expansion
+	generic( round: nRound );
 	port(
 		iKey: in std_logic_vector(127 downto 0);
-		nKey: out std_logic_vector(127 downto 0);
-		round: in nRound
+		nKey: out std_logic_vector(127 downto 0)
 		);
 end KRound;
 
@@ -19,7 +19,6 @@ architecture dataflow of KRound is
 			sdata: out word
 			);
 	end component key_rotate;
-	-- Sbox
 	component sbox is
 		port(
 			data: in word;
@@ -27,10 +26,10 @@ architecture dataflow of KRound is
 			);
 	end component;
 	component XRCON is
+		generic( round: nRound);
 		port(
 			data: in word;
-			sdata: out word;
-			round: in nRound
+			sdata: out word
 			);
 	end component XRCON;
 	component XKey is
@@ -48,6 +47,6 @@ begin
 	W3 <= iKey(31 downto 0);
 	R: key_rotate port map(W3, rW3);	
 	S: sbox port map(rW3, sW3);
-	X: XRCON port map(sW3, T, round);
+	X: XRCON generic map(round => round) port map(sW3, T);
 	K: XKey port map(iKey, nKey, T); 
 end dataflow;

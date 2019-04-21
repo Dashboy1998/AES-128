@@ -4,10 +4,10 @@ use work.rcon_table.all;
 use work.data_types.all;
 
 entity XRCON is
+	generic( round: nRound );
 	port(
 		data: in word;
-		sdata: out word;
-		round: in nRound
+		sdata: out word
 		);
 end entity;
 
