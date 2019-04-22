@@ -21,12 +21,13 @@ package data_types is
 	function to_stdvect(r: AWord) return std_logic_vector;
 	function rol_Bytes(X: word; r: natural) return word;
 	function ror_Bytes(X: word; r: natural) return word;
+	function colMajorWord(r: AWord) return AWord;
 end data_types;	   	 
 
 package body data_types is
 	function flip(X: ARounds) 
-	return ARounds is
-	variable Y: ARounds;
+		return ARounds is
+		variable Y: ARounds;
 	begin
 		for i in X'range loop
 			Y(X'right - i):= X(i);
@@ -120,4 +121,31 @@ package body data_types is
 	begin
 		return std_logic_vector(unsigned(X) ror (r * 8));
 	end ror_Bytes;
+	
+	function colMajorWord(r: AWord) 
+		return AWord is 
+		variable Z: AWord;
+		alias r00 is r(0)(31 downto 24);
+		alias r10 is r(1)(31 downto 24);
+		alias r20 is r(2)(31 downto 24);
+		alias r30 is r(3)(31 downto 24);
+		alias r01 is r(0)(23 downto 16);
+		alias r11 is r(1)(23 downto 16);
+		alias r21 is r(2)(23 downto 16);
+		alias r31 is r(3)(23 downto 16);
+		alias r02 is r(0)(15 downto  8);
+		alias r12 is r(1)(15 downto  8);
+		alias r22 is r(2)(15 downto  8);
+		alias r32 is r(3)(15 downto  8);
+		alias r03 is r(0)( 7 downto  0);
+		alias r13 is r(1)( 7 downto  0);
+		alias r23 is r(2)( 7 downto  0);
+		alias r33 is r(3)( 7 downto  0);
+	begin
+		Z(0) := r00 & r10 & r20 & r30;
+		Z(1) := r01 & r11 & r21 & r31;
+		Z(2) := r02 & r12 & r22 & r32;
+		Z(3) := r03 & r13 & r23 & r33;
+		return Z;
+	end colMajorWord;
 end package body data_types;
