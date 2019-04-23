@@ -13,7 +13,7 @@ end entity multGF8;
 architecture dataflow of multGF8 is
 	signal C: Abyte (0 to 6);
 begin
-	C(0) <= (A and B(0));
+	C(0) <= (A and B(7));
 	C(1) <= ((C(0) rol 1) xor (P and C(0)(7))) xor (A and B(6));
 	C(2) <= ((C(1) rol 1) xor (P and C(1)(7))) xor (A and B(5));
 	C(3) <= ((C(2) rol 1) xor (P and C(2)(7))) xor (A and B(4));

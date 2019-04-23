@@ -5,7 +5,7 @@ use work.data_types.all;
 entity multVector is
 	port(
 		A: in AByte;
-		B: in word;
+		B: in AByte;
 		Z: out Byte
 		);
 end entity multVector;
@@ -21,7 +21,7 @@ architecture dataflow of multVector is
 	signal PP: AByte(0 to 3); -- Partial Products 
 begin
 	MP: for i in 0 to 3 generate
-		PPi: multGF8 port map(A(i), B((31 - i*8) downto (24 - i*8)), PP(i));	
+		PPi: multGF8 port map(A(i), B(i), PP(i));	
 	end generate;
 	
 	Z <= PP(0) xor PP(1) xor PP(2) xor PP(3);
