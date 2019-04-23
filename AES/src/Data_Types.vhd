@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;	
 use ieee.numeric_std.all;
 
-package data_types is
+package data_types is 
 	-- AES-128 has 10 rounds, if you wish for more security you may increase it
 	constant numRounds: natural range 10 to natural'high := 12; -- Change this to modify the number of roads
 	-- Irreducible Polynomial
@@ -22,6 +22,7 @@ package data_types is
 	function rol_Bytes(X: word; r: natural) return word;
 	function ror_Bytes(X: word; r: natural) return word;
 	function colMajorWord(r: AWord) return AWord;
+	function to_AAByte(r: AWord) return AAByte;
 end data_types;	   	 
 
 package body data_types is
@@ -147,5 +148,28 @@ package body data_types is
 		Z(2) := r02 & r12 & r22 & r32;
 		Z(3) := r03 & r13 & r23 & r33;
 		return Z;
-	end colMajorWord;
+	end colMajorWord; 
+	
+	function to_AAByte(r: AWord) 
+		return AAByte is
+		variable Z: AAByte(0 to 3)(0 to 3);
+	begin
+		Z(0)(0) := r(0)(31 downto 24);
+		Z(1)(0) := r(1)(31 downto 24);
+		Z(2)(0) := r(2)(31 downto 24);
+		Z(3)(0) := r(3)(31 downto 24);
+		Z(0)(1) := r(0)(23 downto 16);
+		Z(1)(1) := r(1)(23 downto 16);
+		Z(2)(1) := r(2)(23 downto 16);
+		Z(3)(1) := r(3)(23 downto 16);
+		Z(0)(2) := r(0)(15 downto  8);
+		Z(1)(2) := r(1)(15 downto  8);
+		Z(2)(2) := r(2)(15 downto  8);
+		Z(3)(2) := r(3)(15 downto  8);
+		Z(0)(3) := r(0)( 7 downto  0);
+		Z(1)(3) := r(1)( 7 downto  0);
+		Z(2)(3) := r(2)( 7 downto  0);
+		Z(3)(3) := r(3)( 7 downto  0);
+		return Z;
+	end to_AAByte;
 end package body data_types;
