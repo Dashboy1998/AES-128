@@ -23,6 +23,7 @@ package data_types is
 	function ror_Bytes(X: word; r: natural) return word;
 	function colMajorWord(r: AWord) return AWord;
 	function to_AAByte(r: AWord) return AAByte;
+	function "and"(X: std_logic_vector; Y: std_logic) return std_logic_vector;
 end data_types;	   	 
 
 package body data_types is
@@ -172,4 +173,13 @@ package body data_types is
 		Z(3)(3) := r(3)( 7 downto  0);
 		return Z;
 	end to_AAByte;
+	function "and"(X: std_logic_vector; Y: std_logic) 
+		return std_logic_vector	is
+		variable Z: std_logic_vector(X'range);
+	begin		 
+		for i in X'range loop
+			Z(i) := X(i) and Y;
+		end loop;
+		return Z;
+	end "and"; 
 end package body data_types;

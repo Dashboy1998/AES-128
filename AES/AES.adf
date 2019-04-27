@@ -48,7 +48,7 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=aes_tb|testbench_for_aes|1
+HierarchyInformation=aes_tb|testbench_for_aes|1  
 ShowHide=ShowTopLevel
 Selected=
 
