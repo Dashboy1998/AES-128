@@ -41,7 +41,7 @@ begin
 	end generate GEN_KEYs;
 	-- For Decryption Key
 	dKey(0) <= tKey(numRounds);
-	dKey(12) <= tKey(0);
+	dKey(numRounds) <= tKey(0);
 	GEN_INVKEYs: for i in 1 to numRounds - 1 generate
 		M: MixColumns port map(to_AWord(tKey(numRounds-i)), dKey(i), '1');
 	end generate GEN_INVKEYs;

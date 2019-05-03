@@ -1,0 +1,93 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=Sbox
+
+[Library]
+Sbox=.\Sbox\Sbox.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=Altera CycloneV
+fileopenfolder=E:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\src\Multiplicative_inversion_module3
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=1
+
+[$LibMap$]
+Sbox=.
+Active_lib=
+
+[Groups]
+Multiplicative_inversion_module=1
+
+[Files]
+/S_DataTypes.vhd=-1
+/Affine.vhd=-1
+/Inv_Affine.vhd=-1
+/Sbox.vhd=-1
+Multiplicative_inversion_module/Mult_GF2.vhd=-1
+Multiplicative_inversion_module/Mult_Const_GF2.vhd=-1
+Multiplicative_inversion_module/Isomorpic_Mapping_GF8.vhd=-1
+Multiplicative_inversion_module/Inverse_Isomorpic_Mapping_GF8.vhd=-1
+Multiplicative_inversion_module/Mult_GF4.vhd=-1
+Multiplicative_inversion_module/Squarer_GF4.vhd=-1
+Multiplicative_inversion_module/Mult_Inverse_GF4.vhd=-1
+Multiplicative_inversion_module/Mult_Const_GF4.vhd=-1
+Multiplicative_inversion_module/Mult_Inv.vhd=-1
+
+[Files.Data]
+.\src\S_DataTypes.vhd=VHDL Source Code
+.\src\Affine.vhd=VHDL Source Code
+.\src\Inv_Affine.vhd=VHDL Source Code
+.\src\Sbox.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Mult_GF2.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Mult_Const_GF2.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Isomorpic_Mapping_GF8.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Inverse_Isomorpic_Mapping_GF8.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Mult_GF4.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Squarer_GF4.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Mult_Inverse_GF4.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Mult_Const_GF4.vhd=VHDL Source Code
+.\src\Multiplicative_inversion_module\Mult_Inv.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\
+Extension3=mak
+Name4=Memory
+Directory4=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\
+Extension5=dll
+Name6=PDF
+Directory6=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\
+Extension6=pdf
+Name7=HTML
+Directory7=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\
+Extension7=htm;html
+Name8=ALINT-PRO Workspaces
+Directory8=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\Sbox\
+Extension8=alintws
+[SpecTracer]
+WindowVisible=0

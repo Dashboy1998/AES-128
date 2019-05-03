@@ -2,7 +2,7 @@ library aes;
 library ieee;
 use ieee.std_logic_1164.all;
 use aes.data_types.all;
-use aesTest_GRBC_s18.all;
+use aes128Test.all;
 
 	-- Add your library and packages declaration here ...
 

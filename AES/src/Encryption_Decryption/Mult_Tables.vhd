@@ -4,15 +4,15 @@ use work.data_types.all;
 package mult_x is
 	--Mix Matrices
 	constant forwardMix: AAByte := (
-	(X"03", X"04", X"01", X"07"),
-	(X"07", X"03", X"04", X"01"),
-	(X"01", X"07", X"03", X"04"),
-	(X"04", X"01", X"07", X"03")
+	(X"02", X"03", X"01", X"01"),
+	(X"01", X"02", X"03", X"01"),
+	(X"01", X"01", X"02", X"03"),
+	(X"03", X"01", X"01", X"02")
 	);
 	constant inverseMix : AAByte := (
-	(X"09", X"0B", X"0B", X"08"),	  
-	(X"08", X"09", X"0B", X"0B"),
-	(X"0B", X"08", X"09", X"0B"),
-	(X"0B", X"0B", X"08", X"09")
+	(X"0E", X"0B", X"0D", X"09"),	  
+	(X"09", X"0E", X"0B", X"0D"),
+	(X"0D", X"09", X"0E", X"0B"),
+	(X"0B", X"0D", X"09", X"0E")
 	);
 end mult_x;

@@ -3,10 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 package data_types is 
-	-- AES-128 has 10 rounds, if you wish for more security you may increase it
-	constant numRounds: natural range 10 to natural'high := 12; -- Change this to modify the number of roads
+	-- AES-128 has 10 rounds
+	constant numRounds: natural range 10 to natural'high := 10; -- Change this to modify the number of roads
 	-- Irreducible Polynomial
-	constant irrP: std_logic_vector(8 downto 0):= "101100011";	-- x^8 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1
+	constant irrP: std_logic_vector(8 downto 0):= "100011011";	-- x^8 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1
 	constant P: std_logic_vector(7 downto 0):= irrP(7 downto 1) & "0"; -- x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x
 	subtype byte is std_logic_vector(7 downto 0);
 	type AByte is array (natural range<>) of byte;
@@ -181,5 +181,5 @@ package body data_types is
 			Z(i) := X(i) and Y;
 		end loop;
 		return Z;
-	end "and"; 
+	end "and";
 end package body data_types;

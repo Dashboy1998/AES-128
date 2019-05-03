@@ -1,7 +1,6 @@
 library ieee;
 use work.rcon_table.all;
 use ieee.std_logic_1164.all;
-use work.Sbox_Transformation.all;
 use work.data_types.all;
 
 entity KRound is -- Entity for doing round of key expansion
@@ -19,12 +18,12 @@ architecture dataflow of KRound is
 			sdata: out word
 			);
 	end component key_rotate;
-	component sbox is
+	component Ksbox is
 		port(
 			data: in word;
 			sdata: out word
 			);
-	end component;
+	end component Ksbox;
 	component XRCON is
 		generic( round: nRound);
 		port(
@@ -46,7 +45,7 @@ architecture dataflow of KRound is
 begin  
 	W3 <= iKey(31 downto 0);
 	R: key_rotate port map(W3, rW3);	
-	S: sbox port map(rW3, sW3);
+	S: Ksbox port map(rW3, sW3);
 	X: XRCON generic map(round => round) port map(sW3, T);
 	K: XKey port map(iKey, nKey, T); 
 end dataflow;

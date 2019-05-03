@@ -28,7 +28,7 @@ ON_SERVERFARM_SYNTH=0
 ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
 DVM_DISPLAY=NO
-fileopenfolder=E:\Documents\School\2019_Spring\ECE_541\Project\AES\AES\src\TestBench
+fileopenfolder=E:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\src\TestBench
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -55,49 +55,36 @@ Selected=
 [ORDER]
 Synchronize=0
 
-[Groups]
-Key_Expansion=1
-Encryption_Decryption=1
-TestBench=1
-
-[Files]
-/AES.vhd=-1
-/int.vhd=-1
-/Data_Types.vhd=-1
-/Sbox_Transformation.vhd=-1
-/Multiplication.vhd=-1
-/multVector.vhd=-1
-Key_Expansion/Key_Rotate.vhd=-1
-Key_Expansion/Rcon_Table.vhd=-1
-Key_Expansion/XKey.vhd=-1
-Key_Expansion/sbox.vhd=-1
-Key_Expansion/XRCON.vhd=-1
-Key_Expansion/KRound.vhd=-1
-Key_Expansion/KExpansion.vhd=-1
-Encryption_Decryption/Mult_Tables.vhd=-1
-Encryption_Decryption/EDRotate.vhd=-1
-Encryption_Decryption/EMixColumns.vhd=-1
-Encryption_Decryption/Esbox.vhd=-1
-Encryption_Decryption/Cryption.vhd=-1
-Encryption_Decryption/Cryption_Final.vhd=-1
-Encryption_Decryption/CryptionRounds.vhd=-1
-TestBench/aesTest_GRBC_s18.vhd=-1
-TestBench/aes_TB.vhd=-1
-TestBench/aes_TB_runtest.do=-1
-TestBench/Waveform.asdb=-1
-TestBench/Waveform.awc=-1
+[Folders]
+Name3=Makefiles
+Directory3=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\
+Extension3=mak
+Name4=Memory
+Directory4=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\
+Extension5=dll
+Name6=PDF
+Directory6=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\
+Extension6=pdf
+Name7=HTML
+Directory7=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\
+Extension7=htm;html
+Name8=ALINT-PRO Workspaces
+Directory8=e:\Documents\School\2019_Spring\ECE_541\Project\QAES\AES\AES\
+Extension8=alintws
 
 [Files.Data]
 .\src\AES.vhd=VHDL Source Code
 .\src\int.vhd=VHDL Source Code
 .\src\Data_Types.vhd=VHDL Source Code
-.\src\Sbox_Transformation.vhd=VHDL Source Code
 .\src\Multiplication.vhd=VHDL Source Code
 .\src\multVector.vhd=VHDL Source Code
 .\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
 .\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
 .\src\Key_Expansion\XKey.vhd=VHDL Source Code
-.\src\Key_Expansion\sbox.vhd=VHDL Source Code
+.\src\Key_Expansion\Ksbox.vhd=VHDL Source Code
 .\src\Key_Expansion\XRCON.vhd=VHDL Source Code
 .\src\Key_Expansion\KRound.vhd=VHDL Source Code
 .\src\Key_Expansion\KExpansion.vhd=VHDL Source Code
@@ -108,9 +95,40 @@ TestBench/Waveform.awc=-1
 .\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
 .\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
-.\src\TestBench\aesTest_GRBC_s18.vhd=VHDL Source Code
 .\src\TestBench\aes_TB.vhd=VHDL Test Bench
 .\src\TestBench\aes_TB_runtest.do=Macro
 .\src\TestBench\Waveform.asdb=Accelerated Waveform File
 .\src\TestBench\Waveform.awc=Accelerated Waveform Configuration
+.\src\TestBench\aes128Test.vhd=VHDL Source Code
+
+[Groups]
+Key_Expansion=1
+Encryption_Decryption=1
+TestBench=1
+
+[Files]
+/AES.vhd=-1
+/int.vhd=-1
+/Data_Types.vhd=-1
+/Multiplication.vhd=-1
+/multVector.vhd=-1
+Key_Expansion/Key_Rotate.vhd=-1
+Key_Expansion/Rcon_Table.vhd=-1
+Key_Expansion/XKey.vhd=-1
+Key_Expansion/Ksbox.vhd=-1
+Key_Expansion/XRCON.vhd=-1
+Key_Expansion/KRound.vhd=-1
+Key_Expansion/KExpansion.vhd=-1
+Encryption_Decryption/Mult_Tables.vhd=-1
+Encryption_Decryption/EDRotate.vhd=-1
+Encryption_Decryption/EMixColumns.vhd=-1
+Encryption_Decryption/Esbox.vhd=-1
+Encryption_Decryption/Cryption.vhd=-1
+Encryption_Decryption/Cryption_Final.vhd=-1
+Encryption_Decryption/CryptionRounds.vhd=-1
+TestBench/aes128Test.vhd=-1
+TestBench/aes_TB.vhd=-1
+TestBench/aes_TB_runtest.do=-1
+TestBench/Waveform.asdb=-1
+TestBench/Waveform.awc=-1
 

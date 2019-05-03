@@ -2,6 +2,7 @@
 Version=10.5
 [Designs]
 aes=.\AES\AES.adf
+sbox=.\Sbox\Sbox.adf
 [Browser]
 sort=order
 mode=none
@@ -10,3 +11,6 @@ order=1
 macro=
 [Expand]
 aes=1
+sbox=0
+[Settings]
+Active=aes
