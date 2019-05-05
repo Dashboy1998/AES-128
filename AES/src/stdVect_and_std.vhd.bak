@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity stdVect_and_std is
+	port(
+		A: in std_logic_vector;
+		B: in std_logic;
+		Z: out std_logic_vector
+		);
+end entity stdVect_and_std;
+
+architecture dataflow of stdVect_and_std is
+	component and2
+		port(
+			A: in std_logic;
+			B: in std_logic;
+			Z: out std_logic
+			);
+	end component and2;
+begin
+	ArrayAND: for i in A'range generate
+		ANDi: and2 port map(A(i), B, Z(i));
+	end generate;
+end architecture dataflow;

@@ -48,7 +48,7 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=aes_tb|testbench_for_aes|1  
+HierarchyInformation=aes_tb|testbench_for_aes|1 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -81,6 +81,8 @@ Extension8=alintws
 .\src\Data_Types.vhd=VHDL Source Code
 .\src\Multiplication.vhd=VHDL Source Code
 .\src\multVector.vhd=VHDL Source Code
+.\src\and2.vhd=VHDL Source Code
+.\src\stdVect_and_std.vhd=VHDL Source Code
 .\src\Key_Expansion\Key_Rotate.vhd=VHDL Source Code
 .\src\Key_Expansion\Rcon_Table.vhd=VHDL Source Code
 .\src\Key_Expansion\XKey.vhd=VHDL Source Code
@@ -95,11 +97,11 @@ Extension8=alintws
 .\src\Encryption_Decryption\Cryption.vhd=VHDL Source Code
 .\src\Encryption_Decryption\Cryption_Final.vhd=VHDL Source Code
 .\src\Encryption_Decryption\CryptionRounds.vhd=VHDL Source Code
+.\src\TestBench\aes128Test.vhd=VHDL Source Code
 .\src\TestBench\aes_TB.vhd=VHDL Test Bench
 .\src\TestBench\aes_TB_runtest.do=Macro
 .\src\TestBench\Waveform.asdb=Accelerated Waveform File
 .\src\TestBench\Waveform.awc=Accelerated Waveform Configuration
-.\src\TestBench\aes128Test.vhd=VHDL Source Code
 
 [Groups]
 Key_Expansion=1
@@ -110,6 +112,8 @@ TestBench=1
 /AES.vhd=-1
 /int.vhd=-1
 /Data_Types.vhd=-1
+/and2.vhd=-1
+/stdVect_and_std.vhd=-1
 /Multiplication.vhd=-1
 /multVector.vhd=-1
 Key_Expansion/Key_Rotate.vhd=-1
